@@ -1,0 +1,15 @@
+<img src="{{ user.photo }}" alt=""> 
+<br/>
+<p>Nom: {{ user.name }} </p>
+<br/>
+<p>Prenom: {{ user.firstName }}</p>
+<br/>
+<p [style.display]="isVisible ? 'block' : 'none'">Age: {{ user.age }}</p>
+<br/>
+<button (click)="isVisible= !isVisible">Hide/Show age</button>
+
+<br/>
+<p>Citation: {{ user.quote }}</p>
+<br/>
+<input type="text" [(ngModel)]='user.quote'/>
+
