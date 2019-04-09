@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="row">
+    <div appHighlight class="movie col-4"><img src="" alt=""><p>Flim1</p></div>
+    <div *ngIf="showMovies">
+      <div class="movie col-4"><img src="" alt=""><p>Flim2</p></div>
+      <div class="movie col-4"><img src="" alt=""><p>Flim3</p></div>
+      <div class="movie col-4"><img src="" alt=""><p>Flim4</p></div>
+      <div class="movie col-4"><img src="" alt=""><p>Flim5</p></div>
+      <div class="movie col-4"><img src="" alt=""><p>Flim6</p></div>
+    </div>
+  </div>
+
+  <button (click)="showMovies= !showMovies">!showMovies</button>
+</div>
