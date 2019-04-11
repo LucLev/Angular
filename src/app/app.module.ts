@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: UserProfileComponent },
+  { path: '', redirectTo: '/signup', pathMatch: 'full' },
   { path: 'signup', component: SignUpComponent },
   { path: 'user', component: UserProfileComponent },
   { path: 'movies', component: MoviesComponent },
@@ -17,6 +17,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HighlightDirective } from './highlight.directive';
 import { MenuComponent } from './menu/menu.component';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @NgModule({
   declarations: [
@@ -39,3 +40,4 @@ import { MenuComponent } from './menu/menu.component';
 })
 export class AppModule { }
 export class AppRoutingModule {}
+
