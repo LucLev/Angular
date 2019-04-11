@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/signup', pathMatch: 'full' },
+  { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'signup', component: SignUpComponent },
   { path: 'user', component: UserProfileComponent },
   { path: 'movies', component: MoviesComponent },
