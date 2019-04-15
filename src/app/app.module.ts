@@ -3,14 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', redirectTo: '/user', pathMatch: 'full' },
-  { path: 'signup', component: SignUpComponent },
-  { path: 'user', component: UserProfileComponent },
-  { path: 'movies', component: MoviesComponent },
-];
 
 
+import { routes } from './app.routes' ;
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
