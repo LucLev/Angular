@@ -40,4 +40,5 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 })
 export class AppModule { }
 export class AppRoutingModule {}
+export { routes };
 
