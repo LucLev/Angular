@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
 
 @Component({
   selector: 'app-user-profile',
@@ -11,13 +10,16 @@ export class UserProfileComponent implements OnInit {
 
   isVisible:boolean = true;
 
-  user: User = {
+  /*public user: User = {
     name: 'sauce',
     firstName: 'six',
+    mail: 'default@mail.com',
     age: 8,
     quote: 'ataaa',
     photo: 'http://dianantes.free.fr/images/animal-saucisse.gif',
-  }
+  }*/
+  
+
 
   constructor() { }
 

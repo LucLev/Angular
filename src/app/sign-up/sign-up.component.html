@@ -1,3 +1,43 @@
-<h1> {{ mail }}</h1>
-
-<input type="email" [(ngModel)]='mail'/>
+<form class="row col-4 offset-4" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <div class="col-12">
+            <label for="Name">User</label>
+            <input class="col-12" type="text" [(ngModel)]='model.name' placeholder="Name" name="Name" required #name="ngModel" minlength="4" maxlength="25">
+    </div>
+    <div *ngIf="name.errors" class="col-12">
+            <span *ngIf="name.errors.required && myForm.submitted">Champ Requis</span>
+            <span *ngIf="name.errors.minlength && myForm.submitted">Doit etre superieur à 4 charactères</span>
+            <span *ngIf="name.errors.maxlength && myForm.submitted">Le champ user ne doit pas dépasser 25 caractères</span>
+    </div>
+    <div class="col-12">
+            <label for="First name">Name</label>
+            <input class="col-12" type="text" [(ngModel)]='model.firstName' placeholder="First name" name="First name" #firstName="ngModel">
+    </div>
+    <div class="col-12">
+            <label for="Email">Email</label>
+            <input class="col-12" type="email" [(ngModel)]='model.mail' placeholder="Email" name="Email" required email #mail="ngModel">
+    </div>
+    <div *ngIf="mail.errors" class="col-12">
+            <span *ngIf="mail.errors.required && myForm.submitted">Champ Requis</span>
+            <span *ngIf="mail.errors.email && myForm.submitted"> Le champ email est invalide</span>
+    </div>
+    <div class="col-12">
+            <label for="Age">Age</label>
+            <input class="col-12" type="text" [(ngModel)]='model.age' placeholder="Age" name="Age" #age="ngModel">
+    </div>
+    <div class="col-12">
+            <label for="Quote">Quote</label>
+            <input class="col-12" type="text" [(ngModel)]='model.quote' placeholder="Quote" name="Quote" #quote="ngModel">
+    </div>
+    <div class="col-12">
+            <label for="image">image</label>
+            <input class="col-12" type="text" [(ngModel)]='model.photo' placeholder="image" name="image" #photo="ngModel">
+    </div>
+    <button class="col-12" type="submit">Valider</button>
+    <div class="col-12">
+            <p> Status:</p>
+        <p> 
+            Form submitted ? {{myForm.submitted}}
+            Form valid ? {{myForm.valid}}
+        </p>
+    </div>
+</form>
